@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NutriFlow | Advanced Health AI</title>
+    <!-- Premium Fonts: Poppins for Headings, Nunito for UI Body -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- Ionicons for Advanced UI Icons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+    <!-- Advanced Dynamic Background -->
+    <div class="bg-mesh">
+        <div class="mesh-blob color-1"></div>
+        <div class="mesh-blob color-2"></div>
+        <div class="mesh-blob color-3"></div>
+    </div>
+
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar glass-panel">
+        <div class="brand">
+            <div class="brand-icon"><ion-icon name="leaf"></ion-icon></div>
+            <span>NutriFlow</span>
+        </div>
+        <nav class="nav-menu">
+            <a href="#" class="nav-item active">
+                <ion-icon name="grid-outline"></ion-icon> Dashboard
+            </a>
+            <a href="#" class="nav-item">
+                <ion-icon name="restaurant-outline"></ion-icon> Meal Plans
+            </a>
+            <a href="#" class="nav-item">
+                <ion-icon name="stats-chart-outline"></ion-icon> Analytics
+            </a>
+            <a href="#" class="nav-item">
+                <ion-icon name="flame-outline"></ion-icon> Challenges
+            </a>
+        </nav>
+        <div class="user-profile">
+            <img src="https://api.dicebear.com/7.x/notionists/svg?seed=Felix" alt="User" class="avatar">
+            <div class="user-info">
+                <strong>Premium User</strong>
+                <span>Level 12 Health</span>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Workspace -->
+    <main class="workspace">
+        <header class="top-nav">
+            <div class="greeting slide-in">
+                <h1>Hello, Globetrotter 👋</h1>
+                <p>Welcome to your advanced dietary command center.</p>
+            </div>
+            <div class="top-actions slide-in" style="animation-delay: 0.1s;">
+                <div class="search-bar">
+                    <ion-icon name="search-outline"></ion-icon>
+                    <input type="text" placeholder="Search foods, habits...">
+                </div>
+                <button class="icon-btn"><ion-icon name="notifications-outline"></ion-icon></button>
+            </div>
+        </header>
+
+        <div class="dashboard-grid">
+            
+            <!-- Quick Log Panel -->
+            <div class="bento-box quick-log glass-panel slide-in" style="animation-delay: 0.2s;">
+                <div class="bento-header">
+                    <h3><ion-icon name="flash"></ion-icon> Quick Log</h3>
+                    <span class="status-badge pulse-active">Live Sync</span>
+                </div>
+                <div class="input-group">
+                    <input type="text" id="habit-input" placeholder="e.g. Drank 2L of water..." autocomplete="off">
+                    <div class="action-buttons">
+                        <button class="btn btn-emerald" id="btn-good-habit">
+                            <ion-icon name="checkmark-circle"></ion-icon> Good Habit
+                        </button>
+                        <button class="btn btn-rose" id="btn-bad-habit">
+                            <ion-icon name="close-circle"></ion-icon> Bad Habit
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AI Chatbot Panel -->
+            <div class="bento-box ai-coach glass-panel slide-in" style="animation-delay: 0.3s;">
+                <div class="bento-header ai-header">
+                    <div class="ai-title">
+                        <div class="ai-avatar"><ion-icon name="hardware-chip"></ion-icon></div>
+                        <h3>NutriCore AI Coach</h3>
+                    </div>
+                    <button class="icon-btn small"><ion-icon name="expand-outline"></ion-icon></button>
+                </div>
+                <div class="chat-window" id="chat-messages">
+                    <div class="message bot">
+                        <div class="msg-avatar"><ion-icon name="sparkles"></ion-icon></div>
+                        <div class="msg-bubble">Worldwide analytics loaded. How can I optimize your metabolic rate today?</div>
+                    </div>
+                </div>
+                <div class="chat-input-wrapper">
+                    <input type="text" id="chat-input" placeholder="Ask for meal prep, scientific advice...">
+                    <button id="chat-send" class="btn-send"><ion-icon name="paper-plane"></ion-icon></button>
+                </div>
+            </div>
+
+            <!-- Real-time Stats -->
+            <div class="bento-box stats-panel glass-panel slide-in" style="animation-delay: 0.4s;">
+                <div class="bento-header">
+                    <h3><ion-icon name="pulse"></ion-icon> Today's Diagnostics</h3>
+                </div>
+                <div class="stat-rings">
+                    <div class="ring-item">
+                        <div class="c-ring emerald" style="--perc: 85;"><span>85%</span></div>
+                        <p>Hydration</p>
+                    </div>
+                    <div class="ring-item">
+                        <div class="c-ring amber" style="--perc: 62;"><span>62%</span></div>
+                        <p>Protein</p>
+                    </div>
+                    <div class="ring-item">
+                        <div class="c-ring violet" style="--perc: 94;"><span>94%</span></div>
+                        <p>Vitality</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- History Feed -->
+            <div class="bento-box timeline-panel glass-panel slide-in" style="animation-delay: 0.5s;">
+                <div class="bento-header">
+                    <h3><ion-icon name="time"></ion-icon> Neural Feed</h3>
+                    <button class="icon-btn small"><ion-icon name="filter"></ion-icon></button>
+                </div>
+                <ul class="advanced-timeline" id="habit-list">
+                    <!-- Javascript will populate -->
+                    <li class="skeleton-loader"></li>
+                    <li class="skeleton-loader"></li>
+                </ul>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Mobile Bottom Navigation -->
+    <nav class="mobile-nav">
+        <a href="#" class="mobile-nav-item active"><ion-icon name="grid-outline"></ion-icon></a>
+        <a href="#" class="mobile-nav-item"><ion-icon name="restaurant-outline"></ion-icon></a>
+        <a href="#" class="mobile-nav-item"><button class="mobile-fab"><ion-icon name="add"></ion-icon></button></a>
+        <a href="#" class="mobile-nav-item"><ion-icon name="stats-chart-outline"></ion-icon></a>
+        <a href="#" class="mobile-nav-item"><ion-icon name="person-outline"></ion-icon></a>
+    </nav>
+
+    <script src="app.js"></script>
+</body>
+</html>
